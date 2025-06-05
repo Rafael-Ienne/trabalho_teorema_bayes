@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliador de Exposição à IA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>IA generativa e empregos: uma avaliação de exposição</h1>
+        <p>Lançado pela Organização Internacional do Trabalho (OIT) e pelo Instituto Nacional de Pesquisa da Polônia (NASK) em 20 de maio, o estudo "IA generativa e Empregos: Um Índice Global Refinado de Exposição Ocupacional" apresenta a avaliação global mais detalhada até o momento sobre como a IA generativa pode remodelar o mundo do trabalho.</p>
+        <p>O índice oferece uma visão única e diferenciada de como a IA pode transformar ocupações e empregos em diferentes países, combinando quase 30.000 tarefas ocupacionais com validação especializada, pontuação assistida por IA e microdados harmonizados pela OIT.</p>
+        <p>As principais conclusões do estudo incluem:</p>
+            <ul>
+                <li>Novos “gradientes de exposição”, que agrupam ocupações de acordo com seu nível de exposição à IA generativa, permitem que os formuladores de políticas diferenciem entre empregos com alto risco de automação total e aqueles que provavelmente evoluirão por meio da transformação de tarefas;</li>
+                <li>25% do emprego global estão em ocupações potencialmente expostas à IA generativa, com participações maiores em países de renda alta (34%).</li>
+            </ul>
+        <p>Para saber mais, acesse este <a href="https://brasil.un.org/pt-br/294688-ia-generativa-e-empregos-um-%C3%ADndice-global-refinado-de-exposi%C3%A7%C3%A3o-ocupacional" target="_blank">link</a> do estudo completo da OIT e NASK.</p>
+
+        <h2>Avaliador de exposição à IA generativa</h2>
+
+        <p>Preencha a informação abaixo para estimar a probabilidade de uma ocupação estar potencialmente exposta à IA generativa:</p>
+
+        <form id="exposureForm">
+            <div class="form-group">
+                <label for="paisAltaRenda">A ocupação está em um país de renda alta?</label>
+                <input type="checkbox" id="paisAltaRenda" name="paisAltaRenda">
+            </div>
+
+            <button type="submit">Calcular exposição</button>
+        </form>
+
+        <div id="result" class="result-box" style="display: none;">
+            <h2>Resultado</h2>
+            <p><strong>Evento A:</strong> ocupação potencialmente exposta à IA generativa.</p>
+            <p><strong>Evento B:</strong> ocupação em um país de renda alta.</p>
+            <p><strong id="pergunta"></strong>, ou seja, a probabilidade de uma ocupação estar em potencial exposição à IA generativa, dado que ela <strong id="is_pais_alta_renda"></strong> se localiza em um país de alta renda, é de: <strong id="probabilidade_exposicao"></strong>%</p>
+            <h2>Detalhes do cálculo</h2>
+            <ul>
+                <li id="detail-P_A"></li>
+                <li id="detail-P_NAO_A"></li>
+                <li id="detail-P_B_A_1"></li>
+                <li id="detail-P_B_A_2"></li>
+                <li id="detail-P_B"></li>
+            </ul>
+            <p><strong>Fórmula utilizada (Teorema de Bayes):</strong></p>
+            <p id="formula"></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
