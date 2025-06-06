@@ -42,18 +42,18 @@ def calcular_exposicao():
     # Definir as probabilidades baseadas na evidência (País de Renda Alta ou Não)
     if is_pais_alta_renda:
         # Queremos P(Exposta | País de Renda Alta)
-        # P(B|A) = P_PAIS_ALTA_RENDA_DADO_EXPOSTA
-        # P(A) = P_EXPOSTA
-        # P(B) = P_PAIS_ALTA_RENDA (calculado acima)
+        # P(B|A) = P_B_DADO_A
+        # P(A) = P_A
+        # P(B) = P_B (calculado acima)
         
         prob_numerador = P_B_DADO_A * P_A
         prob_denominador = P_B # Usamos a probabilidade marginal calculada
 
     else:
         # Queremos P(Exposta | Não País de Renda Alta)
-        # P(B|~A) = P(Não País de Renda Alta | Exposta) = 1 - P_PAIS_ALTA_RENDA_DADO_EXPOSTA
-        # P(A) = P_EXPOSTA
-        # P(~B) = P(Não País de Renda Alta) = 1 - P_PAIS_ALTA_RENDA
+        # P(~B|A) = P( Não País de Renda Alta | Exposta) = 1 - P_B_DADO_A
+        # P(A) = P_A
+        # P(~B) = P(Não País de Renda Alta) = 1 - P_B
         
         prob_numerador = (1 - P_B_DADO_A) * P_A
         prob_denominador = (1 - P_B)

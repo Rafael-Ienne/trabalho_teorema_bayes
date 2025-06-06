@@ -28,8 +28,8 @@ document.getElementById('exposureForm').addEventListener('submit', async functio
 
         document.getElementById('is_pais_alta_renda').textContent = 'não';
         document.getElementById('detail-P_B_A_1').textContent = `P(~B | A): ${detalhes.P_NAO_B_DADO_A}% (chance de uma ocupação não estar em um país de renda alta, dado que ela está exposta à IA)`;
-        document.getElementById('detail-P_B_A_2').textContent = `P(~B | ~A): ${detalhes.P_NAO_B_DADO_NAO_A}% (valor inventado da chance de uma ocupação não estar em um país de alta renda, dada que ela não é exposta à IA)`;
-        document.getElementById('detail-P_B').textContent = `P(~B): ${detalhes.P_NAO_B}% (probabilidade marginal de uma ocupação não estar em país de renda alta)`;
+        document.getElementById('detail-P_B_A_2').textContent = `P(~B | ~A): ${detalhes.P_NAO_B_DADO_NAO_A}% (valor inventado da chance de uma ocupação não estar em um país de alta renda, dado que ela não é exposta à IA)`;
+        document.getElementById('detail-P_B').textContent = `P(~B): ${detalhes.P_NAO_B}% (probabilidade marginal de uma ocupação não estar em um país de renda alta)`;
 
         document.getElementById('pergunta').textContent = `P(A | ~B)`;
 
@@ -39,7 +39,7 @@ document.getElementById('exposureForm').addEventListener('submit', async functio
 
         document.getElementById('is_pais_alta_renda').textContent = '';
         document.getElementById('detail-P_B_A_1').textContent = `P(B | A): ${detalhes.P_B_DADO_A}% (chance de uma ocupação estar em um país de renda alta, dado que ela está exposta à IA)`;
-        document.getElementById('detail-P_B_A_2').textContent = `P(B | ~A): ${detalhes.P_B_DADO_NAO_A}% (valor inventado da chance e uma ocupação estar em um país de renda alta, dado que ela não está exposta à IA)`;
+        document.getElementById('detail-P_B_A_2').textContent = `P(B | ~A): ${detalhes.P_B_DADO_NAO_A}% (valor inventado da chance de uma ocupação estar em um país de renda alta, dado que ela não está exposta à IA)`;
         document.getElementById('detail-P_B').textContent = `P(B): ${detalhes.P_B}% (probabilidade marginal de uma ocupação estar em país de renda alta)`;
         document.getElementById('pergunta').textContent = `P(A | B)`;
 
