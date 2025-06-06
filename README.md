@@ -37,10 +37,8 @@ Certifique-se de ter o Python 3 e o `pip` (gerenciador de pacotes do Python) ins
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
-    cd seu-repositorio
+    git clone https://github.com/Rafael-Ienne/trabalho_teorema_bayes.git
     ```
-    *(Substitua `seu-usuario/seu-repositorio` pelo caminho real do seu repositório.)*
 
 2.  **Instale as dependências do Python:**
     ```bash
