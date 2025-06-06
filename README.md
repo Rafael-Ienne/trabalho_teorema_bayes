@@ -59,7 +59,7 @@ Certifique-se de ter o Python 3 e o `pip` (gerenciador de pacotes do Python) ins
         └── index.html
     ```
 
-5.  **Execute a aplicação Flask:**
+5.  **Execute a aplicação Flask onde está o arquivo app.py:**
     ```bash
     python app.py
     ```
